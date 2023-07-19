@@ -1,0 +1,6 @@
+IP: 51.250.107.180;
+name_taski: https://taskpracticum.hopto.org/;
+name_kittygram: https://kittigram.mooo.com/;
+login kittygram: yc-user
+login taski: admin
+password: NRjeSf
