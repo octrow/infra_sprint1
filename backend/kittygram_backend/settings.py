@@ -10,11 +10,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = str(os.getenv('SECRET_KEY'))
 
-DEBUG = False
+DEBUG = os.getenv('DEBUG', 'False') == 'True'
 
-# ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS').split(',')
+ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', '127.0.0.1,localhost').split(',')
 
-ALLOWED_HOSTS = ['51.250.107.180', '127.0.0.1', 'locallhost', 'kittigram.mooo.com']
+# ALLOWED_HOSTS = ['51.250.107.180', '127.0.0.1', 'localhost', 'kittigram.mooo.com']
 
 INSTALLED_APPS = [
     'django.contrib.admin',
