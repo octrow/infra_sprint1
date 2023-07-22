@@ -8,13 +8,11 @@ load_dotenv()
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-SECRET_KEY = str(os.getenv('SECRET_KEY'))
+SECRET_KEY = os.getenv('SECRET_KEY')
 
-DEBUG = os.getenv('DEBUG', 'False') == 'True'
+DEBUG = os.getenv('DEBUG', False) == 'True'
 
 ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', '127.0.0.1,localhost').split(',')
-
-# ALLOWED_HOSTS = ['51.250.107.180', '127.0.0.1', 'localhost', 'kittigram.mooo.com']
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -88,7 +86,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Europe/Moscow'
 
 USE_I18N = True
 

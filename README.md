@@ -3,6 +3,14 @@
 ### Описание проекта
 Пользователи могут регистрироваться, загружать профайл с фотографии и описанием, и смотреть питомцев других пользователей.
 
+### Технологии
+
+ - Python 3.10
+ - Django==3.2.3
+ - djangorestframework==3.12.4
+ - Nginx==1.18.0
+ - gunicorn=20.1.0
+
 ### Установка (ubuntu)
 <br>1. Клонировать репозиторий::
 ```
@@ -195,11 +203,3 @@ sudo ln -s /snap/bin/certbot /usr/bin/certbot
 ```
 sudo certbot --nginx
 ```
-
-### Технологии
-
- - Python 3.10
- - Django==3.2.3
- - djangorestframework==3.12.4
- - Nginx==1.18.0
- - gunicorn=20.1.0
