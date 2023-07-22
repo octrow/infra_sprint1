@@ -24,6 +24,19 @@ server {
     ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot
 
 }
+server {
+    if ($host = taskpracticum.hopto.org) {
+        return 301 https://$host$request_uri;
+    } # managed by Certbot
+
+
+
+    listen 80;
+    server_name 51.250.107.180 taskpracticum.hopto.org;
+    return 404; # managed by Certbot
+
+
+}
 
 server {
     server_name 51.250.107.180 kittigram.mooo.com;
@@ -65,13 +78,9 @@ server {
 
 
 
-    if ($host = taskpracticum.hopto.org) {
-        return 301 https://$host$request_uri;
-    } # managed by Certbot
-
-
-
+    server_name 51.250.107.180 kittigram.mooo.com;
     listen 80;
-    server_name 51.250.107.180 kittigram.mooo.com taskpracticum.hopto.org;
     return 404; # managed by Certbot
+
+
 }
